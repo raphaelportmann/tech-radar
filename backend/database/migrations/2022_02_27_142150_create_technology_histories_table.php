@@ -25,7 +25,7 @@ class CreateTechnologyHistoriesTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
 
-            $table->foreign('technology_id')->references('id')->on('technologies');
+            $table->foreign('technology_id')->references('id')->on('technologies')->onDelete('cascade');
             $table->foreign('type_id')->references('id')->on('types');
             $table->foreign('state_id')->references('id')->on('states');
             $table->foreign('user_id')->references('id')->on('users');
