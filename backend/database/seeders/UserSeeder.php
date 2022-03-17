@@ -24,7 +24,7 @@ class UserSeeder extends Seeder
             [
                 'name' => 'Jane Doe',
                 'email' => 'jane@doe.com',
-                'password' => app('hash')->make('cantguessthis', ['rounds' => 12]),
+                'password' => app('hash')->make('supersecret', ['rounds' => 12]),
                 'role' => 'user',
             ],
         ];
